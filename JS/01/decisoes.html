@@ -1,0 +1,37 @@
+<html>
+ <head>
+     <meta charset="utf-8">
+    <body>
+        <script>
+            function retornaSexo(sexo){
+               sexo = sexo.toUpperCase(sexo);
+
+               /* if (sexo == 'M'){
+
+                    return 'Masculino';
+
+                } else if(sexo == 'F'){
+
+                    return 'Feminino';
+
+                } else{
+                    return 'Irineu';
+                }
+
+            } */
+                switch(sexo) {
+                    case 'M':
+                        return 'Masculino';
+                    case 'F':
+                        return 'Feminino';
+                }
+            }
+                
+            var resultado = retornaSexo('f');
+            console.log(resultado);
+
+        </script>
+    </body>
+ </head>
+
+</html>
