@@ -4,6 +4,15 @@
     <body>
         <script>
             // Verificar se num vetor de habilidades possui Javascript
+            function temHabilidade(skills){             
+                
+                return (skills[skills.indexOf("Javascript")] == "Javascript") ? true : false;                                                
+            }
+            
+            var skills = ["Javascript", "ReactJS", "ReactNative"];
+            console.log(temHabilidade(skills));
+            
+
         </script>
     </body>
  </head>
