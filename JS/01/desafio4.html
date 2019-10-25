@@ -4,32 +4,16 @@
     <body>
         <script>
            function experiencia(anos){
+               var exp = 0;
             
-                switch(anos){
-                    case anos >= 0 && anos < 1:
-                         console.log("Iniciante");
-                         break;
-
-                    case anos >= 1 && anos <= 3:
-                    
-                        return "Intermediário";
-                    
-                    case anos >= 3 && anos <= 6:
-                        return "Avançado";
-                    
-                    case anos >= 7:
-                   
-                        console.log("Mestre Jedi");
-                    
-                    default:
-                        return "Erro";
-                        
+                if (anos >= 0 && anos <= 1)
+                {
+                    return 'Inexperiente';
                 }
-                
               
            }
-           var exp = experiencia(0);
-           console.log(exp);
+           exp = experiencia(0)
+           console.log(experiencia(0));
         </script>
     </body>
  </head>
