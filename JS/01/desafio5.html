@@ -20,8 +20,24 @@
                 habilidades: ["VueJS", "Ruby on rails", "Elixir"]
             }
           ];
+            // console.log(usuarios[0].nome);
+            function desafio5()
+            {
+                for (var iteracao = 0; iteracao < 2; iteracao++)
+                    {
+                        for (var arr of usuarios)
+                        {               
+                            console.log("O " + usuarios[iteracao].nome + " Possui as habilidades com " + usuarios[iteracao].habilidades.join());
+                        }   
+                    }
 
-          
+            }
+            var text = desafio5();
+            console.log(text);
+            
+
+
+
            
         </script>
     </body>
