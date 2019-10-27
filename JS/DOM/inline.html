@@ -1,0 +1,29 @@
+<html>
+ <head>
+     <meta charset="utf-8">
+    <body>
+        <div id="app">
+            <input type="text" name="nome" />
+
+            <button class="botao1">Adicionar</button>
+
+        </div>
+
+        <script>
+            var btnElement = document.querySelector('button.botao1');
+                            // document.querySelector('input[name=nome]') <-- Query com referencia de atributos
+                             // document.querySelectorAll('input') <-- Query com referencia de atributos
+            btnElement.onClick = function() {
+                
+                alert('Botao Clicado');
+
+               }
+
+            
+            
+           
+        </script>
+    </body>
+ </head>
+
+</html>
