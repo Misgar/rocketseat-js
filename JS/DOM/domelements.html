@@ -1,0 +1,30 @@
+<html>
+ <head>
+     <meta charset="utf-8">
+    <body>
+        <div id="app">
+            <input type="text" id="nome" />
+            
+
+        </div>
+
+        <script>
+
+           var linkElement = document.createElement('a'); //Cria elemento (tag) para a dom
+
+           linkElement.setAttribute('href', 'http://rocketseat.com.br');   //seta no elemento os atributos       
+            
+           var textElement = document.createTextNode('Acessar site rocketseat'); //cria um texto
+           linkElement.appendChild(textElement);    //Atribui ao child de linklement (tag "a") o valor de um text <a> TEXTO </a>
+           
+           var containerElement = document.querySelector('#app'); //Seleciona com querySelector o elemento div id app
+           containerElement.append(linkElement);    //atribui a ele um valor de link elemento, que é o elemento de link <a>
+
+           var inputElement = document.querySelector('#nome'); //Remove elemento filho do container div, o filho de id nome
+           containerElement.removeChild(inputElement);
+
+        </script>
+    </body>
+ </head>
+
+</html>

@@ -11,12 +11,14 @@
 
         <script>
             var btnElement = document.querySelector('button.botao1');
+            var inputElement = document.querySelector('input[name=nome]')
             console.log(btnElement);
                             // document.querySelector('input[name=nome]') <-- Query com referencia de atributos
                              // document.querySelectorAll('input') <-- Query com referencia de atributos
             btnElement.onclick = function() {
+                var text = inputElement.value;
                 
-                alert('Botao Clicado');
+                alert(text);
 
                }
 
