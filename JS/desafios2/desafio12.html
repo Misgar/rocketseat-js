@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+
+</head>
+<body>
+    <div id="app">
+
+        
+        <button class="botao">Clique aqui para criar um quadrado.</button>
+
+        <div class="box"></div>
+
+    </div>
+
+    <script>
+        var btnElement = document.querySelector('button.botao');
+
+
+            btnElement.onclick = function(){
+
+            var containerElement = document.querySelector('#app');
+
+            var divElement = document.createElement('div')
+
+            var boxElements = document.querySelector('.box');
+
+            divElement.setAttribute('class', 'box')
+
+            containerElement.appendChild(divElement);
+
+            divElement.style.width = 100;
+            divElement.style.height = 100;
+            divElement.style.backgroundColor = '#f00';
+            divElement.style.margin = 15;
+           
+
+        }
+       
+        /*
+        ESTA EXECUÇÃO FOI REFEITA PARA QUE AO GERAR O QUADRADO, NÃO FIQUE POR CIMA.
+        
+        btnElement.onclick = function(){
+
+            var containerElement = document.querySelector('#app');
+
+            var boxElement = document.querySelector('.box')
+
+            boxElement.style.width = 100;
+            boxElement.style.height = 100;
+            boxElement.style.margin = 15;
+            boxElement.style.backgroundColor = '#f00';
+                
+        }*/
+
+
+    </script>
+</body>
+
+
+</html>
