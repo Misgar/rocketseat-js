@@ -55,11 +55,16 @@
                     var boxElements = document.querySelectorAll('div.box');
                     
                     novaCor = getRandomColors();
-
-                    boxElements[0].style.backgroundColor = novaCor;
-
                     
+                    for (var i = 0; i <= boxElements.length; i++){
 
+                        for (var arr of boxElements)
+                        {
+                            boxElements[i].style.backgroundColor = novaCor;
+                        }
+
+
+                    }
                 }
             
        
