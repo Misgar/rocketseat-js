@@ -9,8 +9,6 @@
         
         <button class="botao">Clique aqui para criar um quadrado.</button>
 
-        <div class="box"></div>
-
     </div>
 
     <script>
@@ -31,34 +29,42 @@
 
 
             btnElement.onclick = function(){
+                var novaCor = getRandomColors();
 
-            var containerElement = document.querySelector('#app');
+                var containerElement = document.querySelector('#app');
 
-            var divElement = document.createElement('div')
+                var divElement = document.createElement('div')
 
-            var boxElements = document.querySelector('.box');
+                var boxElements = document.querySelector('.box');
 
-            divElement.setAttribute('class', 'box')
+                divElement.setAttribute('class', 'box')
 
-            containerElement.appendChild(divElement);
+                divElement.setAttribute('onmouseover', 'mudaCor()')
 
-            divElement.style.width = 100;
-            divElement.style.height = 100;
-            divElement.style.margin = 15;
+                containerElement.appendChild(divElement);
+
+                divElement.style.width = 100;
+                divElement.style.height = 100;
+                divElement.style.margin = 15;
+                divElement.style.backgroundColor = novaCor;             
            
         }
 
-            var boxElements = document.querySelector('.box');
+                function mudaCor(){
+                    
+                    var boxElements = document.querySelectorAll('div.box');
+                    
+                    novaCor = getRandomColors();
 
-            boxElements.onmouseover = function(){
-                console.log("a");
-                var novaCor = getRandomColors();
+                    boxElements[0].style.backgroundColor = novaCor;
 
-                divElement.style.backgroundColor = novaCor;
-            }
+                    
+
+                }
+            
        
 
-
+        
     </script>
 </body>
 
