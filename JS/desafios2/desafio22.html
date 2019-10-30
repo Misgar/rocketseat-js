@@ -4,72 +4,75 @@
 
 </head>
 <body>
-    <div id="app">
-
-        
+    <div id="app" style="display: inline;">
+     
         <button class="botao">Clique aqui para criar um quadrado.</button>
 
     </div>
 
     <script>
-        
+    
         function getRandomColors(){
             var letters = "0123456789ABCDEF";
             var color = "#";
 
-            for (var i = 0; i < 6; i++){
+            for (var i = 0; i < 6; i++)
+            {
                 color += letters[Math.floor(Math.random() * 16)];
             }
 
             return color;
         }
 
+        var btnElement = document.querySelector('button.botao');
+        var idNum = 0;
         
-            var btnElement = document.querySelector('button.botao');
 
 
-            btnElement.onclick = function(){
-                var novaCor = getRandomColors();
+        btnElement.onclick = function(){
+            
+            
 
-                var containerElement = document.querySelector('#app');
+            var novaCor = getRandomColors();
 
-                var divElement = document.createElement('div')
+            var containerElement = document.querySelector('#app');
 
-                var boxElements = document.querySelector('.box');
+            var divElement = document.createElement('div')
 
-                divElement.setAttribute('class', 'box')
+            var boxElements = document.querySelector('.box');
 
-                divElement.setAttribute('onmouseover', 'mudaCor()')
+            divElement.setAttribute('class', 'box')
 
-                containerElement.appendChild(divElement);
+            divElement.setAttribute('onmouseover', 'mudaCor()')
 
-                divElement.style.width = 100;
-                divElement.style.height = 100;
-                divElement.style.margin = 15;
-                divElement.style.backgroundColor = novaCor;             
+            divElement.setAttribute('id', 'box' + idNum);
+
+            containerElement.appendChild(divElement);
+
+            divElement.style.width = 100;
+            divElement.style.height = 100;
+            divElement.style.margin = 15;
+            divElement.style.backgroundColor = '#f00';
+            idNum += 1;          
            
         }
 
-                function mudaCor(){
+        function mudaCor(){
                     
-                    var boxElements = document.querySelectorAll('div.box');
+            var boxElements = document.querySelectorAll('div.box');
                     
-                    novaCor = getRandomColors();
+            novaCor = getRandomColors();
                     
-                    for (var i = 0; i <= boxElements.length; i++){
+                for (var i = 0; i <= boxElements.length; i++){
 
-                        for (var arr of boxElements)
+                    for (var arr of boxElements)
                         {
                             boxElements[i].style.backgroundColor = novaCor;
                         }
 
-
                     }
                 }
-            
        
-
-        
     </script>
 </body>
 
