@@ -64,6 +64,7 @@
             novaCor = getRandomColors();
             
             var el = document.getElementById('app');
+
             el.addEventListener('mouseover', function(e) {
 
                 var boxId = document.getElementById(e.target.id);
@@ -72,14 +73,18 @@
 
             })
                     
-                /*for (var i = 0; i <= boxElements.length; i++){
+                /*
+                RESOLUÇÃO ANTERIOR, ONDE ALTERAVA-SE TODOS AS CLASSES AO MESMO TEMPO
+                for (var i = 0; i <= boxElements.length; i++){
 
                     for (var arr of boxElements)
                         {
                             boxElements[i].style.backgroundColor = novaCor;
                         }
 
-                    } */
+                    } 
+                    
+                */
 
 
                 }
