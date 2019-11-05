@@ -5,6 +5,7 @@
 </head>
 <body>
     <div id="app" style="display: inline;">
+
         <input type="text" name="nome" id="inputNome">
         <button onclick="adicionar()">Adicionar</button>
         <ul id="lista">
@@ -28,10 +29,11 @@
 
             }
 
+            // Adicionar item à ul ao clicar, e apagar o input
             function adicionar(){
-                var inputText = document.querySelector("input#inputNome");
+                var inputText = document.getElementById("inputNome");
 
-                valor = document.getElementById("inputNome").value;
+                var valor = document.getElementById("inputNome").value;
 
                 var item = document.createElement('li');
                 item.setAttribute('class', 'item');
@@ -40,7 +42,6 @@
 
                 item.append(valor);
 
-                inputText.append(" ");
             }
     
     </script>
