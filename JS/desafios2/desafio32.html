@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+
+</head>
+<body>
+    <div id="app" style="display: inline;">
+        <input type="text" name="nome" id="inputNome">
+        <button onclick="adicionar()">Adicionar</button>
+        <ul id="lista">
+
+        </ul>
+
+    </div>
+
+    <script>
+        // Preencher ul com dados do vetor
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        var lista = document.querySelector('ul#lista');
+
+            for (var i = 0; i < nomes.length; i++)
+            {
+                var item = document.createElement('li');
+                item.setAttribute('class', 'item');
+
+                lista.appendChild(item);
+                item.append(nomes[i]);
+
+            }
+
+            function adicionar(){
+
+                valor = document.getElementById("inputNome").value;
+                lista.append(valor)
+                valor.append(' ');
+            }
+    
+    </script>
+</body>
+
+
+</html>
