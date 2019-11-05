@@ -29,10 +29,18 @@
             }
 
             function adicionar(){
+                var inputText = document.querySelector("input#inputNome");
 
                 valor = document.getElementById("inputNome").value;
-                lista.append(valor)
-                valor.append(' ');
+
+                var item = document.createElement('li');
+                item.setAttribute('class', 'item');
+
+                lista.append(item);
+
+                item.append(valor);
+
+                inputText.append(" ");
             }
     
     </script>
